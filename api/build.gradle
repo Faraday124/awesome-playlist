@@ -28,7 +28,7 @@ allOpen {
 dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-noarg'
     implementation 'org.jetbrains.kotlin:kotlin-allopen'
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
@@ -39,6 +39,10 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-testcontainers'
     testImplementation 'org.testcontainers:junit-jupiter'
     testImplementation 'org.testcontainers:mysql'
+    testImplementation platform("org.spockframework:spock-bom:2.3-groovy-4.0")
+    implementation platform('org.apache.groovy:groovy-bom:4.0.16')
+    implementation 'org.apache.groovy:groovy'
+    testImplementation "org.spockframework:spock-core"
 }
 
 tasks.withType(KotlinCompile) {

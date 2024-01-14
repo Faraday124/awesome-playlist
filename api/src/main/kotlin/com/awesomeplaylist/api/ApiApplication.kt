@@ -13,7 +13,5 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 class ApiApplication
 
 fun main(args: Array<String>) {
-    runApplication<ApiApplication>(*args).also {
-        println(it.environment.getProperty("spring.datasource.url"))
-    }
+    runApplication<ApiApplication>(*args)
 }

@@ -1,7 +1,8 @@
-package com.awesomeplaylist.api.rest
+package com.awesomeplaylist.api.service
 
-import com.awesomeplaylist.api.rest.model.Playlist
-import org.springframework.data.domain.Sort
+import com.awesomeplaylist.api.model.Playlist
+import com.awesomeplaylist.api.repository.PlaylistRepository
+import com.awesomeplaylist.api.repository.SongRepository
 import org.springframework.stereotype.Service
 
 @Service
@@ -10,7 +11,7 @@ class PlaylistService(
         private val songRepository: SongRepository
 ) {
 
-    fun getPlaylistById(playlistId: Long, userId: Long, sortParam: String?, sortDirection: String?): Playlist =
+    fun getPlaylistById(playlistId: Long, sortParam: String?, sortDirection: String?): Playlist =
             playlistRepository.findById(playlistId).orElseThrow()
 
     fun getPlaylistByUserId(userId: Long): Playlist =

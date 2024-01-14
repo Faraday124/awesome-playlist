@@ -2,6 +2,9 @@ DELETE FROM playlist_song;
 DELETE FROM playlists;
 DELETE FROM songs;
 
+ALTER TABLE songs AUTO_INCREMENT = 1;
+ALTER TABLE playlists AUTO_INCREMENT = 1;
+
 INSERT INTO songs (title, artist, album, year, song_length, genre)
 VALUES ('Bohemian Rhapsody', 'Queen', 'A Night at the Opera', 1975, '5:55', 'Rock'),
        ('Like a Rolling Stone', 'Bob Dylan', 'Highway 61 Revisited', 1965, '6:13', 'Folk Rock'),

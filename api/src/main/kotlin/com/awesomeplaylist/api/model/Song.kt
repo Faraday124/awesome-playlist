@@ -1,4 +1,4 @@
-package com.awesomeplaylist.api.rest.model
+package com.awesomeplaylist.api.model
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity

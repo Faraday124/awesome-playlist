@@ -1,7 +1,6 @@
-package com.awesomeplaylist.api.rest
+package com.awesomeplaylist.api.repository
 
-import com.awesomeplaylist.api.rest.model.Song
-import org.hibernate.query.SortDirection
+import com.awesomeplaylist.api.model.Song
 import org.springframework.data.domain.Sort
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query

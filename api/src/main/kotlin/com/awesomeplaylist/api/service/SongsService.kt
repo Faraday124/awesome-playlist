@@ -1,6 +1,7 @@
-package com.awesomeplaylist.api.rest
+package com.awesomeplaylist.api.service
 
-import com.awesomeplaylist.api.rest.model.Song
+import com.awesomeplaylist.api.model.Song
+import com.awesomeplaylist.api.repository.SongRepository
 import org.springframework.data.domain.Sort
 import org.springframework.stereotype.Service
 
