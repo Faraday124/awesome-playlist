@@ -1,7 +1,7 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
-import SongsContainer from "./SongsContainer.js";
+import SongsContainer from "./SongsContainer";
+import { Song } from "../interfaces";
 
 const mockSongs = [
   {
@@ -27,7 +27,7 @@ const mockSongs = [
 const mockHandleSelectSong = jest.fn();
 const mockHandleOrder = jest.fn();
 
-const renderComponent = (songs) => {
+const renderComponent = (songs: Song[]) => {
   render(
     <SongsContainer
       handleSelectSong={mockHandleSelectSong}
@@ -68,4 +68,3 @@ describe("SongsContainer Component", () => {
     expect(mockHandleOrder).toHaveBeenCalledWith(expect.any(Function));
   });
 });
-

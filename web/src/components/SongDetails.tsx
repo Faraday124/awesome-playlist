@@ -23,7 +23,7 @@ const SongDetails = ({
     onUpdate(Date.now());
   };
   const handleAddSong = async (id: number) => {
-    await axios.post(`${SERVER_URL}playlists/${playlist}/songs/${id}`);
+    await axios.put(`${SERVER_URL}playlists/${playlist}/songs/${id}`);
     onUpdate(Date.now());
   };
 

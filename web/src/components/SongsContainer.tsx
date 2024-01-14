@@ -1,8 +1,6 @@
 import React from "react";
 import SongRow from "./SongRow";
-// @ts-ignore
 import MusicIcon from "../assets/music-icon.svg";
-// @ts-ignore
 import SortIcon from "../assets/sort-icon.svg";
 import { Song, Sorting } from "../interfaces";
 
