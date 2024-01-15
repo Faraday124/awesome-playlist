@@ -66,4 +66,12 @@ class PlaylistIntegrationTest {
 
     }
 
+//    @Test
+//    fun `should throw 400 when user does not exist`() {
+//        //expect
+//        mockMvc.perform(get("/users/2/playlists"))
+//                .andExpect(status().isNotFound)
+//                .andExpect(jsonPath("$.message").value("User with id 2 not found"))
+//    }
+
 }

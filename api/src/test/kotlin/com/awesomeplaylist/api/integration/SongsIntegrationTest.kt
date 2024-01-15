@@ -64,6 +64,14 @@ class SongsIntegrationTest {
     }
 
     @Test
+    fun `should return 404 when song does not exist`() {
+        //expect
+        mockMvc.perform(get("/songs/999/details"))
+                .andExpect(status().isNotFound)
+                .andExpect(jsonPath("$").value("Song with id 999 not found"))
+    }
+
+    @Test
     fun `should add a new song`() {
         //given
         val mapper = ObjectMapper()

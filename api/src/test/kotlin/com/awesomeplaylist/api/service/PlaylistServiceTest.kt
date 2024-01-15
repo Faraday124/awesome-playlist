@@ -31,7 +31,7 @@ class PlaylistServiceTest {
 
         `when`(playlistRepository.findById(playlistId)).thenReturn(Optional.of(expectedPlaylist))
 
-        val result = playlistService.getPlaylistById(playlistId, null, null)
+        val result = playlistService.getPlaylistById(playlistId)
 
         assertEquals(expectedPlaylist, result)
     }

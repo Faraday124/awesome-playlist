@@ -1,8 +1,6 @@
 import React from "react";
 import axios from "axios";
-// @ts-ignore
 import RemoveIcon from "../assets/remove.svg";
-// @ts-ignore
 import AddIcon from "../assets/add.svg";
 import { SERVER_URL } from "../Utils";
 import { SelectedSong } from "../interfaces";
