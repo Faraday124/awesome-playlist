@@ -16,7 +16,7 @@ MySQL
 
 ---
 #### TODO:
-- ids are longs
+- ids are longs (consider using value objects or UUID)
 - credentials exposed (use tool like AWS ParamStore)
 - album covers are random — add more 
 - error handling (business exceptions)
@@ -30,7 +30,4 @@ MySQL
 - no domain, just CRUD so no hexagonal architecture
 - dto
 - arch unit
-
-#### Comments: 
-
-It's a CRUD application, so there was no need to implement hexagonal infrastructure
+- responsive design (mobile view)

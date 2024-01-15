@@ -1,11 +1,8 @@
 package com.awesomeplaylist.api.model
 
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
-import jakarta.persistence.Table
+import jakarta.persistence.*
+import org.hibernate.annotations.CreationTimestamp
+import java.util.*
 
 
 @Entity
@@ -32,4 +29,9 @@ data class Song(
 
         @Column(name = "genre")
         var genre: String,
-        )
+
+        @CreationTimestamp
+        @Temporal(TemporalType.TIMESTAMP)
+        @Column(name = "created_at")
+        var createdAt: Date? = null
+)
