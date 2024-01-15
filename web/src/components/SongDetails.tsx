@@ -37,12 +37,11 @@ const SongDetails = ({
     );
   }
 
-  const random = Math.floor(Math.random() * 2);
   return (
     <>
       <div className="song-details">
         <img
-          src={`public/assets/${random}.jpeg`}
+          src={`public/assets/1.jpeg`}
           alt="Album Cover"
           className="album-cover"
         />
