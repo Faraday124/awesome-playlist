@@ -21,13 +21,12 @@ MySQL
 - album covers are random — add more 
 - error handling (business exceptions)
 - logging
-- time added the song!
 - only one user and one playlist at the moment 
 - authentication
 - implement filtering
 - security
-- add some covers - mention its random
+- add some album covers - mention its random for demo purposes
 - no domain, just CRUD so no hexagonal architecture
-- dto
+- layer of DTO instead of entities 
 - arch unit
 - responsive design (mobile view)

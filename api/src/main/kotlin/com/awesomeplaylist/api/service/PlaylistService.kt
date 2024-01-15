@@ -42,7 +42,7 @@ class PlaylistService(
             playlistRepository.save(playlist)
         } catch (e: RuntimeException) {
             logger.error { "Failed to remove a song with id $songId to playlist $playlistId" }
-            throw AddingSongException("Failed to remove a song with id $songId to playlist $playlistId")
+            throw RemovingSongException("Failed to remove a song with id $songId to playlist $playlistId")
         }
     }
 }

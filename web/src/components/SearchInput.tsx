@@ -12,7 +12,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ label }) => {
   useEffect(() => {
     if (inputValue?.length > 3) {
       axios
-        .get(`${SERVER_URL}songs}`) //TODO
+        .get(`${SERVER_URL}songs}`) //TODO Search input to be implemented
         .then((response) => console.log(response.data));
     }
   }, [inputValue]);
