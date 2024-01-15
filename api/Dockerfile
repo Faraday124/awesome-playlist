@@ -12,11 +12,17 @@
 #CMD ["java", "-jar", "api.jar"]
 
 
-## Stage 1: Build the application
 FROM openjdk:17-jdk-slim as builder
 WORKDIR /app
 ENV SPRING_PROFILES_ACTIVE=docker
 COPY . .
+
+RUN apt-get update && apt-get install -y dos2unix
+# Convert line endings to Unix format
+RUN find . -type f -name "*.sh" -exec dos2unix {} \;
+RUN dos2unix ./gradlew
+RUN dos2unix ./gradlew.bat
+
 RUN ./gradlew build -x test
 
 # Stage 2: Create a smaller image
