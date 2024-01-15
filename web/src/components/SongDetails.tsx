@@ -51,7 +51,6 @@ const SongDetails = ({
         <p className="duration">Duration: {selectedSong.songLength}</p>
         <p className="genre">Genre: {selectedSong.genre}</p>
         <p className="year">Year: {selectedSong.year}</p>
-      </div>
       {selectedSong.isOnPlaylist && (
         <button
           className="remove-song"
@@ -68,6 +67,7 @@ const SongDetails = ({
           <img src={AddIcon} style={{ fill: "white" }} />
         </button>
       )}
+      </div>
     </>
   );
 };
